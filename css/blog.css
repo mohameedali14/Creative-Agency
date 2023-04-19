@@ -1,0 +1,390 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    width: 100%; 
+
+}
+.header-content{
+    width: 80%;
+    /* height: 50px; */
+    margin: auto;
+
+}
+.logo{
+    width: 40%;
+    float: left;
+}
+
+.logo img{
+    width: 20%;
+}
+.nav{
+    
+    width: 60%;
+    float: left;    
+    z-index: 1;
+}
+.nav li{
+    list-style: none;
+    display: inline-block;  
+}
+
+.nav li> a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 16px;
+    font-size: 15px;
+    display: block; 
+    
+    
+}
+.nav li > a.active::after{
+    content: "";
+    width:100%;
+    height: 2px;
+    background-color: blue;
+    display: block;
+}
+
+.nav li > a::after{
+    content: "";
+    width:0;
+    height: 2px;
+    background-color: blue;
+    display: block;
+    transition: width 0.2s;
+
+}
+.nav li > a:hover::after{
+    width: 100%;
+}
+.bars{
+    display: none;
+}
+.clear{
+    clear: both;
+}
+/* header 2 */
+.header2{
+    width: 100%;
+    height: 100px;
+    background:#f9f9f9;
+    display: flex;
+    align-items: center;
+}
+.container{
+    width: 100%;
+
+}
+.header2-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.logo2{
+    text-transform: capitalize;
+}
+
+
+
+
+.nav-links2 .nav2{
+    list-style: none;
+}
+.nav-links2 .nav2 li{
+    display: inline-block;
+}
+.nav-links2 .nav2 li a{
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-links2 .nav2 li a.active{
+    color: #999;
+}
+/* blog */
+.blog{
+    padding: 120px 0;
+    
+}
+
+.blog-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.blog-item{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  
+}
+.blog-img img{
+    width: 90%;
+}
+.blog-list{
+    list-style: none;
+    margin: 10px 0;
+}
+.blog-list li{
+    display: inline-block;
+    margin:0 5px ;
+}
+.blog-info{
+    text-align: start;
+
+}
+.blog-list li i{
+    color: blue;
+}
+.blog-title{
+    font-weight: bold;
+    margin: 20px 0;
+}
+.blog-des{
+    color: #999;
+    margin-bottom: 10px;
+}
+.search{
+    /* width: 30%;
+    float: left; */
+    position: relative;
+
+}
+
+.search [type="text"]{
+    border: 0;
+    background-color: #e8e8e8;
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+
+}
+.search .icon{
+    color: blue;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top:8px;     
+}
+.search [type="text"]:focus{
+    outline: 0;
+}
+.clear{
+    clear: both;
+}
+
+
+/* footer section */
+
+.footer {
+    background: #1c1d21;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer img {
+    width: 20%;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: blue;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.footer-links li a:hover {
+    opacity: 1;
+}
+
+.footer-links li a i {
+    line-height: 50px;
+}
+
+.footer-des {
+    color: #999;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+/* responsive */
+@media screen and (max-width:767px){
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        
+    }
+    
+    .header-content .logo {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 42px;
+        width: 100%;
+        left: 0;
+    }
+
+    .nav ul{
+       display: flex;
+       flex-direction: column;
+       width: fit-content;
+       margin: auto;
+       text-align: center;
+
+
+       
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+   
+
+    .bars {
+        display: flex;
+        font-size: 22px;
+        width: 10%;
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .zero {
+        display: block;
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    .blog .blog-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .blog-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .blog-img img{
+        width: 100%;
+    }
+    
+    .search{
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+    
+    }
+    
+    .search [type="text"]{
+        border: 0;
+        background-color: #e8e8e8;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        border-radius: 5px;
+    }
+    .search .icon{
+        color: blue;
+        width: 10%;
+        display: block;
+        position: absolute;
+        top: 15px;     
+    }
+    /* header2 */
+    .header2 .container {
+        display: flex;
+    }
+    .header2-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    .logo2 {
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:768px ) and (max-width:1025px){
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        
+    }
+    
+    .header-content .logo {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 66px;
+        width: 100%;
+        left: 0;
+    }
+
+    .nav ul{
+       display: flex;
+       flex-direction: column;
+       width: fit-content;
+       margin: auto;
+       text-align: center;
+
+       
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .bars {
+        display: flex;
+        font-size: 22px;
+        width: 10%;
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+    }
+    .zero {
+        display: block;
+    }
+}
